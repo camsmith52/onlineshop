@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Login = ({ loggedIn, setLoggedIn }) => {
-
-const login=()=>{
-    setLoggedIn(true)
-}
+  const login = () => {
+    setLoggedIn(true);
+  };
 
   return (
     <React.Fragment>
@@ -37,7 +36,7 @@ const login=()=>{
                   />
                 </div>
               </div>
-              <Link to={'/'}>
+              <Link to={"/"}>
                 <button
                   onClick={login}
                   className="ui fluid large teal submit button"

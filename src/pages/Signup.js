@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Signup = ({ loggedIn, setLoggedIn }) => {
   const login = () => {
@@ -19,11 +19,7 @@ const Signup = ({ loggedIn, setLoggedIn }) => {
               <div className="field">
                 <div className="ui left icon input">
                   <i className="user icon"></i>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="name"
-                  />
+                  <input type="text" name="name" placeholder="name" />
                 </div>
               </div>
               <div className="field">
@@ -64,4 +60,4 @@ const Signup = ({ loggedIn, setLoggedIn }) => {
   );
 };
 
-export default Signup
+export default Signup;

@@ -16,11 +16,8 @@ const ShoppingCart = ({ quantity, setQuantity }) => {
     }
   };
 
-  
-
   //Displays items in table in shopping cart
   const items = itemsInBasket.map((item) => {
-    
     return (
       <tr key={item.id}>
         <td data-label="Name">{item.title}</td>

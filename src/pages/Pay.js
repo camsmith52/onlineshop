@@ -8,7 +8,7 @@ const Pay = ({ loggedIn, setLoggedIn }) => {
   const [number, setNumber] = useState("");
   const [cvv, setCvv] = useState("");
   //Helper functions
-  
+
   //JSX
   return (
     <div>
@@ -43,7 +43,7 @@ const Pay = ({ loggedIn, setLoggedIn }) => {
           </div>
         </div>
       </div>
-      {!loggedIn && <p style={{color:'red'}}>Log in to purchase</p>}
+      {!loggedIn && <p style={{ color: "red" }}>Log in to purchase</p>}
       <button
         disabled={!name || !number || !cvv || !loggedIn}
         className="ui button"

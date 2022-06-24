@@ -8,7 +8,6 @@ import Pay from "./pages/Pay";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-
 //Globalstate
 export const GlobalState = createContext({});
 
@@ -28,7 +27,6 @@ function App() {
         setSearch,
         quantity,
         setQuantity,
-       
       ]}
     >
       <Router>
