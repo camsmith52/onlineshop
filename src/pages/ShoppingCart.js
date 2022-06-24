@@ -21,9 +21,9 @@ const ShoppingCart = ({ quantity, setQuantity }) => {
     return (
       <tr key={item.id}>
         <td data-label="Name">{item.title}</td>
-        <td data-label="Quantity">{item.qty} </td>
+        <td data-label="Quantity">item.qty </td>
         <td data-label="Price">${item.price}</td>
-        <td data-label="Total">${item.price * item.qty}</td>
+        <td data-label="Total">${item.price}* item qty</td>
         <td data-label="Remove">
           <button
             className="ui button center"
@@ -41,7 +41,7 @@ const ShoppingCart = ({ quantity, setQuantity }) => {
   let total = 0;
   // eslint-disable-next-line
   const totalCalc = itemsInBasket.forEach((element) => {
-    const converted = Number(element.price * element.qty);
+    const converted = Number(element.price);
     total += converted;
   });
 

@@ -7,10 +7,17 @@ const ItemInfo = () => {
   // const [itemsInBasket, setItemsInBasket, search, setSearch] =
   //   useContext(GlobalState);
   const item = useLocation(); //the useLocation hook here lets you pass props from the Navlink in Home.js
-
+console.log(typeof item.itemProps.item.image);
   const itemInformation = (
     <div className="ui card">
-      <div className="image">{item.itemProps.item.image}</div>
+      <div className="image">
+        <img
+          alt={item.itemProps.item.title}
+          src={item.itemProps.item.image}
+          width="250"
+          height="100"
+        />
+      </div>
       <div className="content">
         <p className="header">{item.itemProps.item.title}</p>
         <div className="meta">
