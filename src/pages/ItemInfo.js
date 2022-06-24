@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
-import { GlobalState } from "../App";
+// import { GlobalState } from "../App";
 
 const ItemInfo = () => {
   //State
-  const [itemsInBasket, setItemsInBasket, search, setSearch] =
-    useContext(GlobalState);
+  // const [itemsInBasket, setItemsInBasket, search, setSearch] =
+  //   useContext(GlobalState);
   const item = useLocation(); //the useLocation hook here lets you pass props from the Navlink in Home.js
 
   const itemInformation = (

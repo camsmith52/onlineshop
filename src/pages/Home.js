@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, {  useContext } from "react";
 import { GlobalState } from "../App";
 import laptop from "../Images/laptop.jpg";
 import cellphone from "../Images/cellphone.jpg";
@@ -7,7 +7,6 @@ import ipad from "../Images/ipad.jpg";
 import macbook from "../Images/macbook.jpg";
 import gopro from "../Images/gopro.jpg";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 
 const DUMMY_DATA = [
   {

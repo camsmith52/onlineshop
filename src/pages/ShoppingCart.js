@@ -39,7 +39,7 @@ const ShoppingCart = ({ quantity, setQuantity }) => {
   });
   //Calculating cost of items
   let total = 0;
-
+  // eslint-disable-next-line
   const totalCalc = itemsInBasket.forEach((element) => {
     const converted = Number(element.price * element.qty);
     total += converted;

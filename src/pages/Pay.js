@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import { NavLink } from "react-router-dom";
-import { VALIDATOR_REQUIRE } from "../Validation/Validate";
+// import { VALIDATOR_REQUIRE } from "../Validation/Validate";
 
 const Pay = ({ loggedIn, setLoggedIn }) => {
   //State
