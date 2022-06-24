@@ -69,7 +69,7 @@ const Home = () => {
   console.log(DUMMY_DATA);
   useEffect(() => {
     const response = async () => {
-      const res = await fetch("https://fakestoreapi.com/products")
+       await fetch("https://fakestoreapi.com/products")
         .then((res) => res.json())
         .then((json) => {
           console.log(json);
@@ -93,7 +93,7 @@ const Home = () => {
 
   const newPage = () => {
     const response = async () => {
-      const res = await fetch("https://fakestoreapi.com/products")
+      await fetch("https://fakestoreapi.com/products")
         .then((res) => res.json())
         .then((json) => {
           console.log(json);
