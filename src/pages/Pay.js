@@ -50,6 +50,7 @@ const Pay = ({ loggedIn, setLoggedIn }) => {
       >
         Pay now
       </button>
+      
     </div>
   );
 };

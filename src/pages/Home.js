@@ -66,42 +66,48 @@ const Home = () => {
     useContext(GlobalState);
 
   const [DUMMY_DATA, setDUMMY_DATA] = useState([]);
-  console.log(DUMMY_DATA);
+
+  //Hooks
   useEffect(() => {
     const response = async () => {
-       await fetch("https://fakestoreapi.com/products")
+      await fetch("https://fakestoreapi.com/products")
         .then((res) => res.json())
         .then((json) => {
-          console.log(json);
+          
           setDUMMY_DATA(json);
         });
     };
     response();
   }, []);
-  console.log(DUMMY_DATA);
+
   //Helper function
   const itemAddedToBasket = (itemBeingAdded) => {
     // e.stopPropagation()
 
     if (itemsInBasket.indexOf(itemBeingAdded) !== -1) {
       //checks if the item is already in the item basket
-      itemBeingAdded.qty += 1;
+      if (itemBeingAdded.qty) {
+        itemBeingAdded.qty += 1;
+        
+      }
     } else {
       setItemsInBasket([...itemsInBasket, itemBeingAdded]);
+      itemBeingAdded.qty = 1;
+      ;
     }
   };
 
-  const newPage = () => {
-    const response = async () => {
-      await fetch("https://fakestoreapi.com/products")
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
-          setDUMMY_DATA(json);
-        });
-    };
-    response();
-  };
+  // const newPage = () => {
+  //   const response = async () => {
+  //     await fetch("https://fakestoreapi.com/products")
+  //       .then((res) => res.json())
+  //       .then((json) => {
+  //         console.log(json);
+  //         setDUMMY_DATA(json);
+  //       });
+  //   };
+  //   response();
+  // };
 
   //Displayed items
   //checks if user is searching. Filter if they are, don't filter if they aren't.
@@ -117,7 +123,7 @@ const Home = () => {
           }}
         >
           <div className="ui segment">
-            {item.title}
+            <div>{item.title}</div>
             <div></div>
             <img alt={item.title} src={item.image} width="200" height="200" />
             <div>
@@ -155,17 +161,17 @@ const Home = () => {
       </div>
     </div>
   );
-
+  
   //JSX
   return (
     <div>
       {searchBar}
       {(
-        <div className="ui four column grid">
+        <div className="ui three column grid">
           {items}
-          <button onClick={newPage} className="ui button right">
+          {/* <button onClick={newPage} className="ui button right">
             Next page...
-          </button>
+          </button> */}
         </div>
       ) || <Loader />}
       <footer style={{ backgroundColor: "black" }}></footer>
